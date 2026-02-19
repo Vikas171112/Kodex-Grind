@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6ff;
+  color: #111;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.task {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.task h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.task p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  height: 80px;
+  width: 80px;
+  background: #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.box-text {
+  width: 200px;
+  height: auto;
+  padding: 15px;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+/* Traffic Light */
+.traffic {
+  width: 90px;
+  background: #222;
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.light {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.red {
+  background: red;
+}
+.yellow {
+  background: yellow;
+}
+.green {
+  background: green;
+}
+
+/* Dark mode class (Task 6) */
+.dark-mode {
+  background: #111 !important;
+  color: white !important;
+}
+
+.dark-mode .task {
+  background: #1f1f1f;
+  color: white;
+}
