@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6ff;
+  color: #111;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.task {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.task h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Dice */
+.dice {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Card */
+.card {
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Gallery */
+.gallery-img {
+  width: 200px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+}
+
+/* Progress Bar */
+#progressWrapper {
+  width: 100%;
+  max-width: 400px;
+  height: 25px;
+  background: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#progressBar {
+  width: 0%;
+  height: 100%;
+  background: #22c55e;
+  transition: 0.3s ease;
+}
+
+/* Boxes */
+.removable-box {
+  width: 70px;
+  height: 70px;
+  background: #ffb703;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Gambling */
+.gamble-num {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background: #e0e7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  border: 2px solid #c7d2fe;
+}
