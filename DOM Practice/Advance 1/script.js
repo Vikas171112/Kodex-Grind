@@ -9,22 +9,25 @@ function runAverage() {
   document.getElementById("avgResult").innerText = result;
 }
 
-/* 2️⃣ Theme Switcher */
 const themeBtn = document.getElementById("themeBtn");
+//try to fetch theme from local storage
 
 if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
+  document.body.classList.add("dark"); //if the theme is dark add the class dark to the documnet
 }
 
 themeBtn.addEventListener("click", () => {
+  //Toggle between dark and natural theme
   document.body.classList.toggle("dark");
+
+  //Check if the document is in daerk or light theme
   const currentTheme = document.body.classList.contains("dark")
     ? "dark"
     : "light";
+  //set the theme according to the above condition
   localStorage.setItem("theme", currentTheme);
 });
 
-/* 3️⃣ Double Click Rotation */
 let rotationCount = 0;
 const rotateBox = document.getElementById("rotateBox");
 
@@ -34,7 +37,6 @@ rotateBox.addEventListener("dblclick", () => {
   rotateBox.innerText = rotationCount;
 });
 
-/* 4️⃣ Custom Map */
 function myMap(arr, callback) {
   const newArr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -48,7 +50,6 @@ function runCustomMap() {
   document.getElementById("mapResult").innerText = result;
 }
 
-/* 5️⃣ Gambling */
 document.getElementById("gambleBtn").addEventListener("click", () => {
   const randomNum = Math.floor(Math.random() * 10) + 1;
   const msg = randomNum > 7 ? "You Win!" : "Try Again!";
@@ -56,7 +57,6 @@ document.getElementById("gambleBtn").addEventListener("click", () => {
     `Number: ${randomNum} → ${msg}`;
 });
 
-/* 6️⃣ Hoisting */
 function runHoisting() {
   var x = 10;
 
@@ -71,7 +71,6 @@ function runHoisting() {
     "Output is undefined because var is hoisted inside function.";
 }
 
-/* 7️⃣ Character Counter */
 const textArea = document.getElementById("textArea");
 const charCount = document.getElementById("charCount");
 
@@ -86,7 +85,6 @@ textArea.addEventListener("input", () => {
   }
 });
 
-/* 8️⃣ Product Filter */
 const products = ["Apple", "Banana", "Mango", "Orange", "Avocado"];
 const productList = document.getElementById("productList");
 
@@ -102,12 +100,11 @@ function displayProducts(arr) {
 displayProducts(products);
 
 document.getElementById("productInput").addEventListener("input", (e) => {
-  const value = e.target.value;
-  const filtered = products.filter((p) => p.startsWith(value));
+  const value = e.target.value.toLowerCase();
+  const filtered = products.filter((p) => p.toLowerCase().startsWith(value));
   displayProducts(filtered);
 });
 
-/* 9️⃣ Dynamic Card */
 document.getElementById("addCardBtn").addEventListener("click", () => {
   const name = document.getElementById("cardName").value;
   const image = document.getElementById("cardImage").value;
@@ -134,7 +131,6 @@ document.getElementById("addCardBtn").addEventListener("click", () => {
   document.getElementById("cardContainer").appendChild(card);
 });
 
-/* 🔟 Clone Object */
 function cloneUser(user, newName) {
   const newObj = {};
   for (let key in user) {
