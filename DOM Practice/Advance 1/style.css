@@ -1,0 +1,51 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #b4d3e1;
+  transition: 0.3s;
+}
+
+section {
+  background: rgb(134, 91, 121);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.dark {
+  background: #111;
+  color: white;
+}
+
+.rotate-box {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+  transition: transform 0.5s ease;
+}
+
+.warning {
+  color: red;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 100px;
+}
