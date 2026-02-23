@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Advanced Tier List Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Tier List Builder</h1>
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+      <input type="text" id="imageURL" placeholder="Paste image URL" />
+      <button id="addURLBtn">Add From URL</button>
+
+      <input type="file" id="imageUpload" accept="image/*" />
+    </div>
+
+    <!-- Tier Container -->
+    <div class="tier-container">
+      <div class="tier">
+        <div class="tier-label s">S</div>
+        <div class="tier-items"></div>
+      </div>
+
+      <div class="tier">
+        <div class="tier-label a">A</div>
+        <div class="tier-items"></div>
+      </div>
+
+      <div class="tier">
+        <div class="tier-label b">B</div>
+        <div class="tier-items"></div>
+      </div>
+
+      <div class="tier">
+        <div class="tier-label c">C</div>
+        <div class="tier-items"></div>
+      </div>
+    </div>
+
+    <h2>Items Pool</h2>
+    <div id="itemPool" class="item-pool"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

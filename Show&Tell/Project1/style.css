@@ -1,0 +1,91 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-section input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.tier-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.tier {
+  display: flex;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 100px;
+}
+
+.tier-label {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.s {
+  background: #ff4d4d;
+}
+.a {
+  background: #ff944d;
+}
+.b {
+  background: #ffd11a;
+}
+.c {
+  background: #4da6ff;
+}
+
+.tier-items {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.item-pool {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+  cursor: grab;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
