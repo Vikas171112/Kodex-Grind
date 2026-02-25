@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-section">
+      <!-- Sidebar -->
+      <aside class="playlist">
+        <h2>Playlist</h2>
+        <!-- JS will inject listItem here -->
+      </aside>
+
+      <!-- Main Area -->
+      <section class="songArea">
+        <!-- Navigation -->
+        <nav class="navigation">
+          <div class="nav-left">
+            <span>Discover</span>
+            <span>My Library</span>
+            <span>Radio</span>
+          </div>
+
+          <div class="nav-center">
+            <input type="text" placeholder="Search music..." />
+          </div>
+
+          <div class="nav-right">
+            <div class="profile"></div>
+          </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="heroSection">
+          <div class="hero-left">
+            <h1></h1>
+            <p></p>
+            <div class="cta">
+              <button>Follow</button>
+              <button class="outline">Subscribe</button>
+            </div>
+          </div>
+
+          <div class="hero-right">
+            <img />
+          </div>
+        </div>
+
+        <!-- Popular Songs -->
+        <div class="popularSongs">
+          <h3>Popular Songs</h3>
+          <div class="songCards">
+            <!-- JS injects cards -->
+          </div>
+        </div>
+
+        <!-- Popular Artists -->
+        <div class="popularArtist">
+          <h3>Popular Artists</h3>
+          <div class="artistCards">
+            <!-- JS injects artists -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Bottom Player -->
+    <footer class="controlArea">
+      <div class="player">
+        <div class="song-info">
+          <div class="thumb"></div>
+          <div>
+            <p></p>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button>⏮</button>
+          <button class="play">▶</button>
+          <button>⏭</button>
+        </div>
+
+        <div class="progress">
+          <input type="range" min="0" max="100" value="0" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
