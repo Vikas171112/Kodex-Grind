@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  height: 400px;
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+}
+.status img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.full {
+  height: 100%;
+  width: 100%;
+  background-color: blanchedalmond;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#progress {
+  /* height: 10px; */
+  width: 100%;
+  background-color: black;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 10%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+#growth {
+  height: 4px;
+  width: 10%;
+  background-color: green;
+}
