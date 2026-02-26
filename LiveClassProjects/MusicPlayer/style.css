@@ -252,3 +252,46 @@ body {
 .progress input {
   width: 200px;
 }
+
+/* Search Wrapper */
+.search-wrapper {
+  position: relative;
+}
+
+.searchSuggestions {
+  position: absolute;
+  top: 45px;
+  width: 100%;
+  background: #1e1e1e;
+  border-radius: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.search-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-item:hover {
+  background: #1db954;
+}
+
+.search-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.search-item .info {
+  display: flex;
+  flex-direction: column;
+}

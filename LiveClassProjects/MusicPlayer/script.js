@@ -21,7 +21,7 @@ const musicAppData = {
       artist: "Justin Bieber",
       duration: "2:54",
       cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4",
-      audio: "assets/audio2.mp3",
+      audio: "assets/audio3.mp3",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ const musicAppData = {
       artist: "Arijit Singh",
       duration: "4:28",
       cover: "https://images.unsplash.com/photo-1506157786151-b8491531f063",
-      audio: "assets/audio3.mp3",
+      audio: "assets/audio2.mp3",
     },
   ],
 
@@ -94,6 +94,9 @@ const playButton = document.querySelector(".controls .play");
 const prevButton = document.querySelector(".controls button:nth-child(1)");
 const nextButton = document.querySelector(".controls button:nth-child(3)");
 const progressBar = document.querySelector(".progress input");
+let searchInput = document.querySelector("#searchInput");
+let searchSuugestions = document.querySelector(".searchSuggestions");
+console.log(searchSuugestions);
 
 //display playlist dynamically
 
@@ -278,4 +281,54 @@ progressBar.addEventListener("input", () => {
 
 currentAudio.addEventListener("ended", () => {
   nextButton.click();
+});
+
+searchInput.addEventListener("input", (e) => {
+  let searchValue = e.target.value.toLowerCase().trim();
+
+  // Clear previous results
+  searchSuugestions.innerHTML = "";
+
+  if (!searchValue) {
+    searchSuugestions.style.display = "none";
+    return;
+  }
+
+  const results = musicAppData.playlist.filter((item) =>
+    Object.values(item).some((value) =>
+      String(value).toLowerCase().includes(searchValue),
+    ),
+  );
+
+  if (results.length === 0) {
+    searchSuugestions.style.display = "none";
+    return;
+  }
+
+  searchSuugestions.style.display = "block";
+
+  results.forEach((song) => {
+    const div = document.createElement("div");
+    div.classList.add("search-item");
+
+    div.innerHTML = `
+      <img src="${song.cover}" />
+      <div class="info">
+        <strong>${song.title}</strong>
+        <small style="color:#aaa">${song.artist}</small>
+      </div>
+    `;
+
+    // Click → play song
+    div.addEventListener("click", () => {
+      const index = musicAppData.playlist.findIndex((s) => s.id === song.id);
+
+      playSong(index);
+
+      searchSuugestions.style.display = "none";
+      searchInput.value = "";
+    });
+
+    searchSuugestions.appendChild(div);
+  });
 });
