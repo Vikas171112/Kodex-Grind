@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  list-style-type: none;
+}
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.maincontent {
+  width: 70%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column; /* ⭐ FIX */
+  align-items: center;
+  gap: 40px; /* spacing between cards */
+}
+.product-card {
+  height: 80%;
+  width: 100%;
+  background-color: rgb(37, 36, 39);
+  display: flex;
+  border-radius: 15px;
+}
+
+.left-container {
+  background-color: rgb(55, 50, 50);
+  height: 100%;
+  width: 40%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+.left-container .image-container {
+  margin-top: 10px;
+  background: #000;
+  height: 50%;
+  width: 80%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.left-container .image-container img {
+  object-fit: cover;
+  /* height: 100%;
+  width: 100%; */
+  transition: all 1s ease;
+}
+.image-container img:hover {
+  transform: scale(1.1);
+}
+.left-container .colors span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  display: inline-block;
+  cursor: pointer;
+}
+.left-container .features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+
+  background-color: #171313;
+  border-radius: 10px;
+
+  padding: 15px 10px;
+}
+
+.left-container .features span {
+  height: 45px;
+  padding: 0 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  color: white;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+.left-container .features span:last-child {
+  border-right: none;
+}
+
+.left-container .features span:hover {
+  transform: translateY(-3px);
+  background: rgba(234, 11, 11, 0.08);
+  border-radius: 6px;
+}
+.right-container {
+  width: 60%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.right-container .right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.right-container .right-top h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.product-rating {
+  color: gold;
+  font-size: 1.2rem;
+}
+.right-container .right-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.right-container .right-top h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.right-container .price {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.right-container .price .old-price {
+  text-decoration: line-through;
+  color: grey;
+}
+.right-container .price .discount {
+  padding: 5px 20px;
+  background-color: red;
+  border-radius: 4px;
+}
+.product-rating {
+  color: gold;
+  font-size: 1.2rem;
+}
+.right-container .sizes {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  background-color: #2a2626;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.right-container .sizes span {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.right-container .sizes span:hover {
+  background: #1db954;
+  border-color: #1db954;
+}
+.btns {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.addtocart {
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #1db954;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addtocart:hover {
+  background: #17a74a;
+}
+
+.wishlist {
+  padding: 14px 18px;
+  background: #2a2626;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wishlist:hover {
+  background: #ff4d6d;
+}
+.pros-cons {
+  display: flex;
+  gap: 25px;
+}
+
+/* COMMON CARD STYLE */
+
+.pros,
+.cons {
+  flex: 1;
+  background-color: #252a2c;
+  padding: 20px;
+  border-radius: 15px;
+
+  transition: all 0.35s ease;
+  cursor: default;
+}
+
+/* HEADINGS */
+
+.pros h4 {
+  color: #4caf50;
+  margin-bottom: 10px;
+}
+
+.cons h4 {
+  color: #ff5252;
+  margin-bottom: 10px;
+}
+
+/* LIST */
+
+.pros li,
+.cons li {
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 10px;
+  border-bottom: 1px solid beige;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+.pros li:hover,
+.cons li:hover {
+  transform: translateX(-4px);
+  transform: translateY(-4px);
+  font: 600;
+}
+
+.pros:hover {
+  background-color: rgba(76, 175, 80, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.25);
+}
+
+.cons:hover {
+  background-color: rgba(255, 82, 82, 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(255, 82, 82, 0.25);
+}
