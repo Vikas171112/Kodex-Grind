@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  font-family: Arial;
+}
+
+body {
+  background: #0f172a;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Scroll Progress */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: #09ef5d;
+  width: 0%;
+  z-index: 1000;
+}
+
+/* Cursor */
+.cursor {
+  width: 20px;
+  height: 20px;
+  background: rgb(228, 25, 25);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Cards */
+.cards {
+  gap: 40px;
+}
+
+.card {
+  width: 200px;
+  height: 120px;
+  background: #2563eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+/* Zoom image */
+.zoom-section img {
+  width: 500px;
+  transition: 0.2s;
+}
+@keyframes pulse {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(4);
+  }
+}
