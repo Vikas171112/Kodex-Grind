@@ -17,7 +17,8 @@ const shoesData = [
     rating: 4.2,
     price: 11999,
     oldPrice: 13999,
-    image: "https://images.unsplash.com/photo-1593032465171-8f6ed4b19e4c",
+    image:
+      "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?q=80&w=1059&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     features: ["Energy Return", "Soft Sole"],
     colors: ["#ffffff", "#1e90ff"],
     sizes: [6, 7, 8, 9, 10],
@@ -30,7 +31,8 @@ const shoesData = [
     rating: 4.3,
     price: 6999,
     oldPrice: 7999,
-    image: "https://images.unsplash.com/photo-1584735175315-9d5df23be620",
+    image:
+      "https://images.unsplash.com/photo-1608230616491-5d696aa9fe52?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D-",
     features: ["Casual", "Street Style", "Comfort Fit"],
     colors: ["#228B22", "#000000"],
     sizes: [7, 8, 9],
@@ -43,7 +45,8 @@ const shoesData = [
     rating: 4.1,
     price: 7999,
     oldPrice: 8999,
-    image: "https://images.unsplash.com/photo-1584735174914-6b1272459f99",
+    image:
+      "https://images.unsplash.com/photo-1530389912609-9a007b3c38a4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     features: ["Training", "Grip", "Durable"],
     colors: ["#808080", "#ffffff"],
     sizes: [8, 9, 10],
@@ -69,7 +72,8 @@ const shoesData = [
     rating: 4.4,
     price: 9999,
     oldPrice: 10999,
-    image: "https://images.unsplash.com/photo-1584735175095-9d5df23be620",
+    image:
+      "https://images.unsplash.com/photo-1719916313433-2c028607d38a?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     features: ["Soft Midsole", "Long Run Comfort"],
     colors: ["#800080", "#1e90ff"],
     sizes: [6, 7, 8, 9],
@@ -82,7 +86,8 @@ const shoesData = [
     rating: 4.0,
     price: 8499,
     oldPrice: 9499,
-    image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6",
+    image:
+      "https://media.istockphoto.com/id/1433052510/photo/young-woman-running-and-getting-fit-in-new-york.jpg?s=2048x2048&w=is&k=20&c=yT9rWTjwMy6GU7Qnl4kBKuxxqoV5H9PsjnE6Caqrmu0=",
     features: ["Responsive", "Modern Style"],
     colors: ["#FFD700", "#000000"],
     sizes: [8, 9, 10],
@@ -108,7 +113,8 @@ const shoesData = [
     rating: 4.1,
     price: 6499,
     oldPrice: 7499,
-    image: "https://images.unsplash.com/photo-1528701800489-20be9c8e3b36",
+    image:
+      "https://images.unsplash.com/photo-1579446565308-427218a2c60e?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     features: ["Chunky Design", "Street Fashion"],
     colors: ["#FFC0CB", "#ffffff"],
     sizes: [7, 8, 9],
