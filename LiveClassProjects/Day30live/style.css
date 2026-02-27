@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* MAIN LAYOUT*/
+.main-content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* SIDEBAR*/
+.left-container {
+  width: 20%;
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+
+.left-top-left {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.left-middle-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.left-middle-left button,
+.left-bottom-left button {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #d1d5db;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.left-middle-left button:hover,
+.left-bottom-left button:hover {
+  background: #1f2937;
+  color: white;
+  transform: translateX(5px);
+}
+
+.left-bottom-left {
+  margin-top: auto;
+  border-top: 1px solid #374151;
+  padding-top: 20px;
+}
+
+/* RIGHT CONTAINER*/
+.right-container {
+  flex: 1;
+
+  background: #f3f4f6;
+  padding: 25px;
+  overflow-y: auto;
+}
+
+/* TOP NAVBAR*/
+.right-top-right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.right-top-right input {
+  flex: 1;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: none;
+  background: white;
+}
+
+.profile {
+  width: 40px;
+  height: 40px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/*  CREATE PRODUCT BUTTON
+*/
+.modelopener button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modelopener button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* Dashboard cards */
+
+.right-top-middle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: gray;
+}
+
+.card p {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.warning {
+  border-left: 5px solid orange;
+}
+.danger {
+  border-left: 5px solid red;
+}
+.success {
+  border-left: 5px solid green;
+}
+
+/* PRODUCT TABLE*/
+.product-list {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.product-list h2 {
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f9fafb;
+}
+
+.in-stock {
+  color: green;
+  font-weight: 600;
+}
+.low-stock {
+  color: orange;
+  font-weight: 600;
+}
+.out-stock {
+  color: red;
+  font-weight: 600;
+}
+
+/*    MODAL OVERLAY*/
+.product-form-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* MODAL CARD*/
+.modal-card {
+  background: white;
+  border-radius: 14px;
+  width: 420px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: modalPop 0.3s ease;
+}
+
+/*  MODAL HEADER*/
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  color: #111827;
+}
+
+.close-icon {
+  font-size: 26px;
+  cursor: pointer;
+  color: #6b7280;
+  transition: 0.3s;
+}
+
+.close-icon:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+/* FORM*/
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* BUTTONS*/
+.submit-btn {
+  background: #2563eb;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.close-btn {
+  background: #ef4444;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #dc2626;
+}
+
+/* MODAL ANIMATION*/
+@keyframes modalPop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

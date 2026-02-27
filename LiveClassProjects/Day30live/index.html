@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inventory Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="main-content">
+      <aside class="left-container">
+        <section class="left-top-left">Inventory</section>
+        <section class="left-middle-left">
+          <span><button type="button">Dashboard</button></span
+          ><span><button type="button">Order</button></span
+          ><span><button type="button">Product</button></span
+          ><span><button type="button">Customer</button></span
+          ><span><button type="button">Employee</button></span
+          ><span><button type="button">Billing</button></span
+          ><span><button type="button">Analytics</button></span
+          ><span><button type="button">Settings</button></span
+          ><span><button type="button">Help</button></span>
+        </section>
+        <section class="left-bottom-left">
+          <button>Log Out</button>
+        </section>
+      </aside>
+      <article class="right-container">
+        <!-- TOP NAV -->
+        <section class="right-top-right">
+          <div class="right-top-right-left">
+            <input type="text" placeholder="Search products..." />
+          </div>
+          <div class="modelopener">
+            <button>Create Product</button>
+          </div>
+
+          <div class="right-top-right-right">
+            <div class="profile">VK</div>
+          </div>
+        </section>
+
+       
+        <section class="right-top-middle">
+          <div class="card" >
+            <h3>Total Products</h3>
+            <p id="total-products"></p>
+          </div>
+
+          <div class="card warning">
+            <h3>Low Stock</h3>
+            <p id="low-stock"></p>
+          </div>
+
+          <div class="card danger">
+            <h3>Out of Stock</h3>
+            <p id="out-stock"></p>
+          </div>
+
+          <div class="card success">
+            <h3>Total Revenue</h3>
+            <p>₹-----</p>
+          </div>
+        </section>
+
+        <!-- PRODUCT TABLE -->
+        <section class="product-list">
+          <h2>Inventory Overview</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Price</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              
+            </tbody>
+          </table>
+        </section>
+      </article>
+     <section class="product-form-container">
+
+  <div class="modal-card">
+
+    <!-- HEADER -->
+    <div class="modal-header">
+      <h2>Create Product</h2>
+      <span class="close-icon">&times;</span>
+    </div>
+
+    <form class="product-form">
+
+      <!-- Product Name -->
+      <div class="form-group" >
+        <label>Product Name</label>
+        <input id="product-name" type="text" placeholder="Enter product name" required />
+      </div>
+
+      <!-- Category -->
+      <div class="form-group" >
+        <label>Category</label>
+        <select required id="product-category">
+        <option value="">Select Category</option>
+        <option>Fashion</option>
+        <option>Home & Kitchen</option>
+        <option>Beauty & Personal Care</option>
+        <option>Books</option>
+        <option>Sports & Fitness</option>
+        <option>Toys & Games</option>
+        <option>Groceries</option>
+        <option>Furniture</option>
+        <option>Accessories</option>
+        </select>
+      </div>
+
+      <!-- Quantity -->
+      <div class="form-group">
+        <label>Quantity</label>
+        <input id="product-quantity" type="number" placeholder="Enter quantity" required />
+      </div>
+
+      <!-- Price -->
+      <div class="form-group">
+        <label>Price (₹)</label>
+        <input id="product-price" type="number" placeholder="Enter price" required />
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Add Product
+      </button>
+
+      <button type="button" class="close-btn">
+        Close
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
