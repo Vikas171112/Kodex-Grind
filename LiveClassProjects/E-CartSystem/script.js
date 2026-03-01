@@ -1,3 +1,4 @@
+//Ststic Data
 const allProducts = [
   {
     name: "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
@@ -75,32 +76,32 @@ const allProducts = [
     image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400",
   },
 ];
-
+//Selection
 const grid = document.querySelector(".product-grid");
 const cartModal = document.getElementById("cart-modal");
 const cartBtn = document.getElementById("cart-btn");
 const closeCart = document.getElementById("close-cart");
 const cartItems = document.querySelector(".cart-items");
 const cartCount = document.getElementById("cart-count");
-
+//Just a state variable for storing products
 let cart = [];
-
+//Seeting item into local storagr for state persistence
 function saveCartToStorage() {
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(cart)); //Change the json into complete string
 }
-
+//Reading the data from local storage
 function loadCartFromStorage() {
   const storedCart = localStorage.getItem("cart");
   if (storedCart) {
     cart = JSON.parse(storedCart);
   }
 }
-
+//Render the products in grid
 function renderProducts() {
   let html = "";
 
   allProducts.forEach((product, index) => {
-    const exists = cart.find((item) => item.id === index);
+    const exists = cart.find((item) => item.id === index); //checking for the items already stored in cart
 
     html += `
       <div class="card">
@@ -118,14 +119,15 @@ function renderProducts() {
 }
 
 function addToCart(id) {
-  let item = cart.find((p) => p.id === id);
+  let item = cart.find((p) => p.id === id); //Checking if item is already present
 
   if (item) {
+    //if present increase the quantity
     item.qty++;
   } else {
     cart.push({
-      id,
-      ...allProducts[id],
+      id, //else push the complete product into cart
+      ...allProducts[id], //destructure the object at the given id(index) of allProducts array and store a new object in cart array having qty=1 and id of that product as well
       qty: 1,
     });
   }
@@ -136,17 +138,19 @@ function addToCart(id) {
 }
 
 function increaseQty(id) {
-  cart.find((p) => p.id === id).qty++;
+  cart.find((p) => p.id === id).qty++; //if product is found in cart incrementing the quantity
   saveCartToStorage();
   updateCart();
 }
 
 function decreaseQty(id) {
+  //decrease the quantity by --decrease btn
   let item = cart.find((p) => p.id === id);
 
   item.qty--;
 
   if (item.qty <= 0) {
+    //if quantity is zero remove the entiire product
     cart = cart.filter((p) => p.id !== id);
   }
 
@@ -156,6 +160,7 @@ function decreaseQty(id) {
 }
 
 function updateCart() {
+  //updste the cart ui+qty
   cartCount.innerText = cart.length;
 
   let html = "";
@@ -178,7 +183,7 @@ function updateCart() {
 
   cartItems.innerHTML = html;
 }
-
+//openers and closers for model
 cartBtn.onclick = () => {
   cartModal.style.display = "flex";
 };
