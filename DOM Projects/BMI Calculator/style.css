@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #143596, #56967e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.unit-toggle {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.unit-toggle button {
+  background: #6c757d;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#calculateBtn {
+  background: #084957;
+  color: white;
+}
+
+.reset {
+  background: #e74a3b;
+  color: white;
+}
+
+.result-box {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #02081b;
+  color: white;
+}
+
+#bmiValue {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.history {
+  margin-top: 20px;
+  /* background-color: #ccc; */
+}
+
+.history ul {
+  list-style: none;
+  margin-top: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+}
+
+.history li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background: #f8f9fc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.history li span {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+.delete-btn {
+  width: 70px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: #dc3545;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #a71d2a;
+}
+.underweight {
+  background: #fff3cd;
+  border: 2px solid #f6c23e;
+  color: #4e73df;
+}
+.normal {
+  background: #d4edda;
+  border: 2px solid #28a745;
+  color: green;
+}
+.overweight {
+  background: #ffe5b4;
+  border: 2px solid #fd7e14;
+  color: rgb(191, 94, 65);
+}
+.obese {
+  background: #f8d7da;
+  border: 2px solid #dc3545;
+  color: rgb(176, 5, 5);
+}
