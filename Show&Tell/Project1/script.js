@@ -35,8 +35,9 @@ imageUpload.addEventListener("change", (event) => {
   const file = event.target.files[0];
   if (file) {
     const reader = new FileReader();
-
+//Async Process onload is used to implement if the reading of the file is compleed or not
     reader.onload = function (e) {
+      console.log("Reading is finished");
       createImageItem(e.target.result);
     };
 

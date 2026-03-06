@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced DOM Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Advanced DOM Simulator</h1>
+
+    <div class="container">
+      <div class="editor">
+        <h2>HTML Editor</h2>
+        <textarea id="htmlInput">
+<div class="card">
+  <h1>Hello DOM</h1>
+  <p>This is a DOM Simulator</p>
+  <button>Click Me</button>
+</div>
+    </textarea
+        >
+      </div>
+
+      <div class="preview">
+        <h2>Live Preview</h2>
+        <div id="previewArea"></div>
+      </div>
+
+      <div class="tree">
+        <h2>DOM Tree</h2>
+        <ul id="domTree"></ul>
+      </div>
+    </div>
+
+    <div class="inspector">
+      <h2>Node Inspector</h2>
+      <p id="tag"></p>
+      <p id="classes"></p>
+      <p id="children"></p>
+      <p id="ids"></p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
