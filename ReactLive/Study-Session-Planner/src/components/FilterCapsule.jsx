@@ -22,7 +22,6 @@ function FilterCapsule({ label, options, value, onChange, disabled }) {
         <FiChevronDown className="text-xs" />
       </button>
 
-      {/* Dropdown */}
       {!disabled && open && (
         <div
           className="absolute mt-2 w-40 bg-[#111827] border border-white/10 
@@ -32,6 +31,7 @@ function FilterCapsule({ label, options, value, onChange, disabled }) {
             <div
               key={opt}
               onClick={() => {
+                console.log("Selected ", opt);
                 onChange(opt);
                 setOpen(false);
               }}

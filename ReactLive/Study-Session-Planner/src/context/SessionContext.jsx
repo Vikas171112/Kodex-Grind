@@ -7,6 +7,7 @@ export function SessionContextProvider({ children }) {
   const [sessions, setSessions] = useState([]);
   const [subjectFilter, setSubjectFilter] = useState("All");
   const [priorityFilter, setPriorityFilter] = useState("All");
+  console.log("Sunject filter from context", subjectFilter);
 
   const createSession = (data) => {
     const newSession = {
@@ -27,10 +28,24 @@ export function SessionContextProvider({ children }) {
   };
   const filteredSessions = sessions.filter((s) => {
     const subjectMatch = subjectFilter === "All" || s.subject === subjectFilter;
+    const priorityMatch =
+      priorityFilter === "All" || s.priority === priorityFilter;
+    return subjectMatch && priorityMatch;
   });
   return (
     <SessionContext.Provider
-      value={{ sessions, createSession, deleteSession, toggleComplete }}
+      value={{
+        sessions,
+        createSession,
+        deleteSession,
+        toggleComplete,
+        filteredSessions,
+        setSubjectFilter,
+        subjectFilter,
+        setPriorityFilter,
+        subjectFilter,
+        priorityFilter,
+      }}
     >
       {children}
     </SessionContext.Provider>

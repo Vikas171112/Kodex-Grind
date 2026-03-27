@@ -13,6 +13,14 @@ function SessionForm() {
   const { createSession } = useSessionContext();
   const onSubmit = (data) => {
     console.log("FORM DATA:", data);
+    const today = new Date();
+    const selectedDate = new Date(data.date);
+    today.setHours(0, 0, 0, 0);
+    selectedDate.setHours(0, 0, 0, 0);
+    if (selectedDate < today) {
+      alert("Invalid Date");
+      return;
+    }
     createSession(data);
     reset();
   };
@@ -83,8 +91,8 @@ function SessionForm() {
           <label className="text-xs text-gray-400">DATE</label>
           <input
             type="date"
+            min={new Date().toISOString().split("T")[0]}
             {...register("date")}
-            className="w-full mt-1 bg-transparent border-b border-white/10 py-2 text-white"
           />
         </div>
 
