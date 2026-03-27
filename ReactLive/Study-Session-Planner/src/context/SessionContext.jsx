@@ -5,6 +5,9 @@ const SessionContext = createContext();
 
 export function SessionContextProvider({ children }) {
   const [sessions, setSessions] = useState([]);
+  const [subjectFilter, setSubjectFilter] = useState("All");
+  const [priorityFilter, setPriorityFilter] = useState("All");
+
   const createSession = (data) => {
     const newSession = {
       id: Date.now(),
@@ -22,7 +25,9 @@ export function SessionContextProvider({ children }) {
       prev.map((s) => (s.id === id ? { ...s, completed: !s.completed } : s)),
     );
   };
-
+  const filteredSessions = sessions.filter((s) => {
+    const subjectMatch = subjectFilter === "All" || s.subject === subjectFilter;
+  });
   return (
     <SessionContext.Provider
       value={{ sessions, createSession, deleteSession, toggleComplete }}
