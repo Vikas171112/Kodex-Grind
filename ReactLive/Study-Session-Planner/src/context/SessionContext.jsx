@@ -4,10 +4,13 @@ import { createContext, useContext } from "react";
 const SessionContext = createContext();
 
 export function SessionContextProvider({ children }) {
-  const [sessions, setSessions] = useState([]);
+  const [sessions, setSessions] = useState(() => {
+    const stored = localStorage.getItem("sessions");
+    return stored ? JSON.parse(stored) : [];
+  });
+
   const [subjectFilter, setSubjectFilter] = useState("All");
   const [priorityFilter, setPriorityFilter] = useState("All");
-  console.log("Sunject filter from context", subjectFilter);
 
   const createSession = (data) => {
     const newSession = {
@@ -15,23 +18,41 @@ export function SessionContextProvider({ children }) {
       ...data,
       completed: false,
     };
-    setSessions((prev) => [...prev, newSession]);
-    console.log("Session Created Successfully");
+
+    const updated = [...sessions, newSession];
+
+    setSessions(updated);
+
+    localStorage.setItem("sessions", JSON.stringify(updated));
   };
+
   const deleteSession = (id) => {
-    setSessions((prev) => prev.filter((session) => session.id !== id));
+    const updated = sessions.filter((session) => session.id !== id);
+
+    setSessions(updated);
+
+    localStorage.setItem("sessions", JSON.stringify(updated));
   };
+
   const toggleComplete = (id) => {
-    setSessions((prev) =>
-      prev.map((s) => (s.id === id ? { ...s, completed: !s.completed } : s)),
+    const updated = sessions.map((s) =>
+      s.id === id ? { ...s, completed: !s.completed } : s,
     );
+
+    setSessions(updated);
+
+    localStorage.setItem("sessions", JSON.stringify(updated));
   };
+
   const filteredSessions = sessions.filter((s) => {
     const subjectMatch = subjectFilter === "All" || s.subject === subjectFilter;
+
     const priorityMatch =
       priorityFilter === "All" || s.priority === priorityFilter;
+
     return subjectMatch && priorityMatch;
   });
+
   return (
     <SessionContext.Provider
       value={{
@@ -40,10 +61,10 @@ export function SessionContextProvider({ children }) {
         deleteSession,
         toggleComplete,
         filteredSessions,
+
         setSubjectFilter,
         subjectFilter,
         setPriorityFilter,
-        subjectFilter,
         priorityFilter,
       }}
     >
@@ -51,4 +72,5 @@ export function SessionContextProvider({ children }) {
     </SessionContext.Provider>
   );
 }
+
 export const useSessionContext = () => useContext(SessionContext);

@@ -6,7 +6,6 @@ function FilterCapsule({ label, options, value, onChange, disabled }) {
 
   return (
     <div className="relative">
-      {/* Capsule */}
       <button
         onClick={() => !disabled && setOpen(!open)}
         className={`flex items-center gap-2 px-4 py-1 rounded-full 

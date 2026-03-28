@@ -14,9 +14,9 @@ function Navbar() {
         <h1 className="text-xl font-semibold text-purple-300">StudyFlow</h1>
       </div>
 
-      <div className="bg-white/10 text-gray-300 px-4 py-1 rounded-full text-sm">
+      {/* <div className="bg-white/10 text-gray-300 px-4 py-1 rounded-full text-sm">
         ⏱ 165 MIN TODAY
-      </div>
+      </div> */}
 
       <div className="flex items-center gap-5">
         <FiBell className="text-gray-400 hover:text-white cursor-pointer text-lg" />
