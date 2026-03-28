@@ -19,7 +19,7 @@ function SessionCard({ session }) {
     <div
       className={`w-full bg-[#111827]/70 backdrop-blur-xl 
       border border-white/10 rounded-3xl p-6 shadow-lg text-white 
-      hover:scale-[1.01] transition
+      hover:scale-[1.01] transition bg-[var(--card)] text-[var(--text)]
       ${session.completed ? "opacity-50 line-through" : ""}`}
     >
       <div className="flex justify-between items-start">

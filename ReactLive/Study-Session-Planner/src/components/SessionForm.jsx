@@ -26,7 +26,7 @@ function SessionForm() {
   };
 
   return (
-    <div className="w-full max-w-md bg-[#111827]/70 backdrop-blur-xl border border-white/10 rounded-3xl p-6 shadow-xl">
+    <div className="w-full max-w-md bg-[#111827]/70 backdrop-blur-xl border bg-[var(--card)] text-[var(--text)] border-white/10 rounded-3xl p-6 shadow-xl">
       <h2 className="text-white text-xl font-semibold mb-6 flex items-center gap-2">
         <span className="text-purple-400 text-2xl">
           <IoIosAddCircleOutline />

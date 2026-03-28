@@ -4,7 +4,7 @@ import SessionList from "./components/SessionList";
 
 function App() {
   return (
-    <div className="bg-[#0b1220] min-h-screen">
+    <div className="bg-[#0b1220] min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <Navbar />
 
       <div className="max-w-7xl mx-auto p-6 grid md:grid-cols-3 gap-6">
